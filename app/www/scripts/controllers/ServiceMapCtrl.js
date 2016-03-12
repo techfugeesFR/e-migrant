@@ -1,10 +1,88 @@
 app.controller('ServiceMapCtrl', function($scope, $rootScope) {
   $scope.typeList = 'service';
 
-  var residents = [
+  var users = [
     {
-    	"firstname": "Donald",
-    	"img": "https://www.thewrap.com/wp-content/uploads/2015/11/Donald-Trump.jpg",
+      "type": 0,
+      "name" : "Jean",
+      "description" : "J'aime coudre des jeans.",
+      "image" : "./img/1.jpg",
+      "job":"Couturier",
+      "pos": {
+    		"lat": 48.8689,
+    		"lng": 2.379886
+    	},
+    },
+    {
+      "type": 0,
+      "name" : "Pierre",
+      "description" : "Je taille la pierre comme personne.",
+      "image" : "./img/2.jpg",
+      "job":"Tailleur",
+      "pos": {
+    		"lat": 48.85,
+    		"lng": 2.34
+    	},
+    },
+    {
+      "type": 0,
+      "name" : "Fred",
+      "description" : "L'informatique c'est mon dada.",
+      "image" : "./img/3.jpg",
+      "job": "Informaticien",
+      "pos": {
+    		"lat": 48.87,
+    		"lng": 2.3886
+    	},
+    },
+    {
+      "type": 0,
+      "name" : "Luke",
+      "description" : "J'ai la force de beaucoup travailler.",
+      "image" : "./img/4.jpg",
+      "job": "Maçon",
+      "pos": {
+        "lat": 48.864517,
+        "lng": 2.369335
+      }
+    },
+    {
+      "type": 0,
+      "name" : "JacquieMichel",
+      "description" : "Endurant et très actif.",
+      "image" : "./img/5.jpg",
+      "job": "Acteur de charme",
+      "pos": {
+        "lat": 48.859576,
+        "lng": 2.371759
+      }
+    },
+    {
+      "type": 0,
+      "name" : "Sacha",
+      "description" : "Sacha aux platines !",
+      "image" : "./img/6.jpg",
+      "job": "Djokey",
+      "pos": {
+        "lat": 48.867467,
+        "lng": 2.375236
+      }
+    },
+    {
+      "type": 0,
+      "name" : "Tzïdia",
+      "description" : "Je suis une chef reconnu dans mon pays !",
+      "image" : "./img/7.jpg",
+      "job": "Cuisinier",
+      "pos": {
+        "lat": 48.860903,
+        "lng": 2.388217
+      }
+    },
+    {
+      "type": 1,
+    	"name": "Donald",
+    	"image": "https://www.thewrap.com/wp-content/uploads/2015/11/Donald-Trump.jpg",
     	"pos": {
     		"lat": 48.8689,
     		"lng": 2.379886
@@ -14,8 +92,9 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope) {
       "demand": 1
     },
     {
-    	"firstname": "Barack",
-    	"img": "http://www.sdpk.eu/wp-content/uploads/2014/07/number-2-u-s-president-barack-obama-second-most-admired-person-planet.jpg",
+      "type": 1,
+    	"name": "Barack",
+    	"image": "http://www.sdpk.eu/wp-content/uploads/2014/07/number-2-u-s-president-barack-obama-second-most-admired-person-planet.jpg",
     	"pos": {
     		"lat": 48.85,
     		"lng": 2.34
@@ -25,48 +104,16 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope) {
       "demand": 1
     },
     {
-    	"firstname": "Joe",
-    	"img": "https://i.kinja-img.com/gawker-media/image/upload/s--7rFEsW95--/c_fill,fl_progressive,g_north,h_358,q_80,w_636/197gkt72jr0e1jpg.jpg",
+      "type": 1,
+    	"name": "Dr.Denfer",
+    	"image": "https://i.kinja-img.com/gawker-media/image/upload/s--7rFEsW95--/c_fill,fl_progressive,g_north,h_358,q_80,w_636/197gkt72jr0e1jpg.jpg",
     	"pos": {
     		"lat": 48.87,
     		"lng": 2.3886
     	},
-    	"description": "Bonjour je m'apelle Coco !",
+    	"description": "Mouahahaha..",
     	"offer": 2,
       "demand": 1
-    }
-  ];
-
-  var migrants = [
-    {
-    	"firstname": "Toto",
-    	"img": "https://www.thewrap.com/wp-content/uploads/2015/11/Donald-Trump.jpg",
-    	"pos": {
-    		"lat": 48.862117,
-    		"lng": 2.378519
-    	},
-    	"description": "Bonjour je m'apelle Toto, je suis Plombier depuis 3 ans !",
-    	"job": "Plombier"
-    },
-    {
-    	"firstname": "Siti",
-    	"img": "http://www.sdpk.eu/wp-content/uploads/2014/07/number-2-u-s-president-barack-obama-second-most-admired-person-planet.jpg",
-    	"pos": {
-    		"lat": 48.864517,
-    		"lng": 2.369335
-    	},
-    	"description": "Bonjour je m'apelle Sisi, si vous avez un probleme avec votre voiture appellez moi !",
-    	"job": "Garagiste"
-    },
-    {
-    	"firstname": "Coco",
-    	"img": "https://i.kinja-img.com/gawker-media/image/upload/s--7rFEsW95--/c_fill,fl_progressive,g_north,h_358,q_80,w_636/197gkt72jr0e1jpg.jpg",
-    	"pos": {
-    		"lat": 48.87,
-    		"lng": 2.3886
-    	},
-    	"description": "Bonjour je m'apelle Coco !",
-    	"job": "Menuisier"
     }
   ];
 
@@ -82,14 +129,10 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope) {
       mapTypeControl: false
     });
 
-    // var searchItem = document.getElementById('search');
-    // var searchBox = new google.maps.places.SearchBox(document.getElementById('searchInput'));
-    // map.controls[google.maps.ControlPosition.TOP_LEFT].push(searchItem);
-
-    // Bias the SearchBox results towards current map's viewport.
-    // map.addListener('bounds_changed', function() {
-    //   searchBox.setBounds(map.getBounds());
-    // });
+    // Create the search box and link it to the UI element.
+    // var input = document.getElementById('pac-input');
+    // var searchBox = new google.maps.places.SearchBox(input);
+    // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
     markerInit();
   });
@@ -107,10 +150,11 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope) {
   }
 
   function markerInit(){
-    migrants.forEach(function(element,index){
+    users.forEach(function(element,index){
+      if(element.type==1 && $rootScope.type==1) return;
 
       var infowindow = new google.maps.InfoWindow({
-        content: contentMigrantString(element),
+        content: element.type ? contentResidentString(element) : contentMigrantString(element),
         maxWidth: 200
       });
 
@@ -120,9 +164,9 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope) {
         animation: google.maps.Animation.DROP,
         position: element.pos,
         map: map,
-        title: element.firstname,
+        title: element.name,
         icon: {
-          url: element.img,
+          url: element.image,
           scaledSize: new google.maps.Size(42, 42),
           origin: new google.maps.Point(0, 0),
           anchor: new google.maps.Point(0, 42)
@@ -140,7 +184,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope) {
 
   function contentMigrantString(data){
     return "<div style='overflow:hidden'>"+
-        "<b>"+data.firstname+" est un "+data.job+"</b>"+
+        "<b>"+data.name+" est un "+data.job+"</b>"+
         "<hr>"+
         "<p>"+data.description+"</p>"+
         "<a class='button button-block button-positive'>"+
@@ -151,7 +195,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope) {
 
   function contentResidentString(data){
     return "<div style='overflow:hidden'>"+
-        "<b>"+data.firstname+" offre "+data.offer+" services et demande "+data.demand+" services</b>"+
+        "<b>"+data.name+" est un résident</b>"+
         "<hr>"+
         "<p>"+data.description+"</p>"+
         "<a class='button button-block button-positive'>"+
