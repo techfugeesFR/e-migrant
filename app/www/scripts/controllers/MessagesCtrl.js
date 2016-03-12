@@ -1,3 +1,3 @@
-angular.module('app.controllers', []).controller('MessagesCtrl', function($scope, $stateParams) {
+app.controller('MessagesCtrl', function($scope, $stateParams) {
 
 });

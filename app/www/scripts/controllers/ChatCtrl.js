@@ -1,3 +1,3 @@
-angular.module('app.controllers', []).controller('ChatCtrl', function($scope, $stateParams) {
+app.controller('ChatCtrl', function($scope, $stateParams) {
 
 });

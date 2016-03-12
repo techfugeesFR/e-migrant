@@ -1,3 +1,3 @@
-angular.module('app.controllers', []).controller('NeedListCtrl', function($scope, $stateParams) {
+app.controller('NeedListCtrl', function($scope, $stateParams) {
 
 });

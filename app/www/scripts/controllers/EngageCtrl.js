@@ -1,3 +1,3 @@
-angular.module('app.controllers', []).controller('EngageCtrl', function($scope, $stateParams) {
+app.controller('EngageCtrl', function($scope, $stateParams) {
 
 });

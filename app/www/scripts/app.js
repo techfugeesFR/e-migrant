@@ -4,13 +4,12 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers'])
+var app = angular.module('app', ['ionic']);
 
-.run(function($ionicPlatform, $rootScope) {
+app.run(function($ionicPlatform, $rootScope) {
 
   //EN ATTENDANT LA SELECTION DU MIGRANT/CIVIL
   $rootScope.type = 1;
-
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -24,12 +23,12 @@ angular.module('app', ['ionic', 'app.controllers'])
       StatusBar.styleDefault();
     }
   });
-})
+});
 
-.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
@@ -70,7 +69,7 @@ angular.module('app', ['ionic', 'app.controllers'])
       url: '/sign',
       views: {
         'menuContent': {
-          templateUrl: 'templates/Sign.html'
+          templateUrl: 'templates/Sign.html',
           controller: 'SignCtrl'
         }
       }
@@ -92,7 +91,7 @@ angular.module('app', ['ionic', 'app.controllers'])
       views: {
         'menuContent': {
           templateUrl: 'templates/List.html',
-          controller: 'ServiceListCtrl'
+          controller: 'ServicesListCtrl'
         }
       }
     })
@@ -101,7 +100,7 @@ angular.module('app', ['ionic', 'app.controllers'])
     url: '/service/map',
     views: {
       'menuContent': {
-        templateUrl: 'templates/map.html',
+        templateUrl: 'templates/Map.html',
         controller: 'ServiceMapCtrl'
       }
     }
@@ -120,7 +119,7 @@ angular.module('app', ['ionic', 'app.controllers'])
     url: '/need/map',
     views: {
       'menuContent': {
-        templateUrl: 'templates/map.html',
+        templateUrl: 'templates/Map.html',
         controller: 'ServiceMapCtrl'
       }
     }
@@ -174,8 +173,8 @@ angular.module('app', ['ionic', 'app.controllers'])
         controller: 'ChatCtrl'
       }
     }
-  }) 
+  });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/service/list');
+  $urlRouterProvider.otherwise('/app/service/list');
 });
