@@ -6,13 +6,39 @@
 // 'starter.controllers' is found in controllers.js
 var app = angular.module('app', ['ionic']);
 
-app.run(function($ionicPlatform, $rootScope) {
+app.run(function($ionicPlatform, $rootScope, $ionicModal) {
+
+  $ionicModal.fromTemplateUrl('lang.html', {
+      scope: $rootScope,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $rootScope.modal = modal;
+    });
 
   //EN ATTENDANT LA SELECTION DU MIGRANT/CIVIL
   $rootScope.type = 1;
+
+  $rootScope.lang = 'fr';
+
+  $rootScope.langChange = function(lang) {
+    $rootScope.lang = lang;
+    $rootScope.closeModal();
+  };
+
+    $rootScope.openModal = function() {
+      $rootScope.modal.show();
+    };
+    $rootScope.closeModal = function() {
+      $rootScope.modal.hide();
+    };
+
+
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
+
+    $rootScope.openModal();
+
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
@@ -126,7 +152,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   })
 
   .state('app.engage', {
-    url: '/engage',
+    url: '/engage/:id',
     views: {
       'menuContent': {
         templateUrl: 'templates/Engage.html',
@@ -136,7 +162,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   })
 
   .state('app.engageForm', {
-    url: '/engage/form',
+    url: '/engage/form/:id',
     views: {
       'menuContent': {
         templateUrl: 'templates/EngageForm.html',
@@ -146,7 +172,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   })    
 
   .state('app.help', {
-    url: '/help',
+    url: '/help/:id',
     views: {
       'menuContent': {
         templateUrl: 'templates/Help.html',
@@ -156,7 +182,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   })
 
   .state('app.helpForm', {
-    url: '/help/form',
+    url: '/help/form/:id',
     views: {
       'menuContent': {
         templateUrl: 'templates/HelpForm.html',

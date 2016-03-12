@@ -1,1 +1,7 @@
 /* Empty. Add your own CSS if you like */
+.lang {
+	position: relative;
+    top: 10px;
+    font-size: 19px;
+    left: 5px;
+}

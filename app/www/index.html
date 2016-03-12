@@ -14,6 +14,7 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/jquery/dist/jquery.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <!--<script src="cordova.js"></script>-->
@@ -40,5 +41,26 @@
 
   <body ng-app="app">
     <ion-nav-view></ion-nav-view>
+
+
+        <script id="lang.html" type="text/ng-template">
+          <ion-modal-view>
+            <ion-header-bar>
+              <h1 class="title">Choix de la langue</h1>
+            </ion-header-bar>
+            <ion-content>
+                 <div class="list">
+                    <a ng-click="langChange('albanian')" class="item item-avatar" href="#">
+                      <img src="img/flag/ab.png">
+                      <h2 class="lang">Albanian</h2>
+                    </a>
+                    <a ng-click="langChange('france')" class="item item-avatar" href="#">
+                      <img src="img/flag/fr.png">
+                      <h2 class="lang">Français</h2>
+                    </a>
+                </div>               
+            </ion-content>
+          </ion-modal-view>
+        </script>
   </body>
 </html>
