@@ -1,25 +1,26 @@
 app.controller('NewsCtrl', function($scope, $stateParams) {
-    $scope.news = [
-	{
-		"titre": "La valeur",
-		"contenu": "Lorem",
-		"img": "URL IMG",
-	},
-	{
-		"titre": "La valeur",
-		"contenu": "Lorem",
-		"img": "URL IMG",
-	},
-	{
-		"titre": "La valeur",
-		"contenu": "Lorem",
-		"img": "URL IMG",
-	},
-	{
-		"titre": "La valeur",
-		"contenu": "Lorem",
-		"img": "URL IMG",
-	},
+    $scope.news = 
+[
+    {
+        "titre": "500 personnes en soutien aux réfugiés au Mans",
+        "contenu": "JEAN-CLAUDE BOULARD REÇU PAR LAURENT FABIUS AU SUJET DES RÉFUGIÉS… Le maire du Mans Jean-Claude Boulard a été reçu hier par le ministre des affaires étrangères Laurent Fabius au sujet des réfugiés. Cela fait un an que la mairie travaille sur l'accueil de 35 syriens, menacés dans leur pays. Et parmi eux, la famille d'un cardiologue syrien basé au Mans, le docteur Aleid. Selon la ville,  le ministre a publiquement confirmé sa volonté d'accélérer les dossiers en travaillant avec le ministre de l'intérieur Bernard Cazeneuve. 500 PERSONNES RASSEMBLÉES PLACE DE LA RÉPUBLIQUE EN SOUTIEN AUX RÉFUGIÉS… Au Mans, 500 personnes étaient rassemblées place de la République en fin d'après-midi hier, pour apporter leur soutien aux réfugiés. Un logement, des cours de français ou divers dons… Le mot d'ordre était \"solidarité\" avec un slogan \"Nous sommes tous migrants\". Un rassemblement à l'initiative de \"la ligue des droits de l'homme\" et de \"réseau d'éducation sans frontières\". Un texte de soutien a par ailleurs rassemblé 300 signatures",
+        "img": "http://media.rtl2.fr/cache/_3jIpjssgAT8dfJtSgKH9Q/795v530-0/online/image/2015/0910/7779667323_500-personnes-etaient-rassemblees-place-de-la-republique-au-mans-hier-en-soutien-aux-refugies.jpg",
+    },
+    {
+        "titre": "Comment l'Union européenne tente de se débarrasser des réfugiés",
+        "contenu": " SOMMET UE-TURQUIE. On l’avait compris au mois de décembre 2015 lors de la signature d’un accord avec la Turquie, l’UE cherche à faire de ce pays son garde-frontière pour empêcher les réfugiés de rejoindre l’Union européenne. Le Sommet de ce lundi est une nouvelle étape dans cette fuite en avant où la protection des réfugiés passe au second rang, très loin derrière cette frénésie de fermeture des frontières. Mise à jour du 9/03/16 : Le Premier ministre turc Ahmet Davutoğlu, le président du Conseil européen Donald Tusk et le président de la Commission européenne Jean Claude Juncker ont exposé les grandes lignes du projet d'accord final entre l'UE et la Turquie, en amont de la réunion du Conseil européen prévue les 17 et 18 mars. La proposition qui consiste à installer un Syrien sur le territoire de l'UE pour chaque réfugié syrien renvoyé de la Grèce vers la Turquie, est émaillée d'irrégularités morales et juridiques. Il est troublant que dans ce plan, chaque place de réinstallation offerte à un Syrien en Europe soit conditionnée au fait qu'un autre Syrien risque sa vie en embarquant à destination de la Grèce.  Les dirigeants turcs et européens ont touché le fond aujourd'hui, en marchandant les droits et la dignité de personnes parmi les plus vulnérables au monde. L'idée de troquer des réfugiés contre des réfugiés est déshumanisante, et n'offre pas de solution durable à la crise humanitaire actuelle » Iverna McGowan, directrice du Bureau européen d'Amnesty International La Turquie serait un « pays sûr » Pour réussir leur plan, les responsables européens doivent décider que la Turquie est un pays sûr pour les réfugiés. Une idée absurde et déconnectée de la réalité dans ce pays :  - Des réfugiés ont été purement et simplement renvoyés en Syrie et continuent de l’être - Les forces de sécurité turques ont même tiré sur des Syriens qui tentaient de se mettre à l’abri sur le territoire turc. - Des milliers de réfugiés Syriens vivent dans des conditions terribles, sans aide, soutien ni aucune perspective de protection ; - Des centaines de milliers d’enfants Syriens n’ont accès à aucune éducation.",
+        "img": "http://www.amnesty.fr/sites/default/files/imagecache/vignette_campagne_actu/225711_a_syrian_refugee_reacts_as_he_waits_behind_border_fences_to_cross_into_turkey_at_akcakale_border_gate_in_sanliurfa_province_turkey.jpg",
+    },
+    {
+        "titre": "Les réfugiés ne sont pas une marchandise",
+        "contenu": "JEAN-CLAUDE BOULARD REÇU PAR LAURENT FABIUS AU SUJET DES RÉFUGIÉS… Le maire du Mans Jean-Claude Boulard a été reçu hier par le ministre des affaires étrangères Laurent Fabius au sujet des réfugiés. Cela fait un an que la mairie travaille sur l'accueil de 35 syriens, menacés dans leur pays. Et parmi eux, la famille d'un cardiologue syrien basé au Mans, le docteur Aleid. Selon la ville,  le ministre a publiquement confirmé sa volonté d'accélérer les dossiers en travaillant avec le ministre de l'intérieur Bernard Cazeneuve. 500 PERSONNES RASSEMBLÉES PLACE DE LA RÉPUBLIQUE EN SOUTIEN AUX RÉFUGIÉS… Au Mans, 500 personnes étaient rassemblées place de la République en fin d'après-midi hier, pour apporter leur soutien aux réfugiés. Un logement, des cours de français ou divers dons… Le mot d'ordre était \"solidarité\" avec un slogan \"Nous sommes tous migrants\". Un rassemblement à l'initiative de \"la ligue des droits de l'homme\" et de \"réseau d'éducation sans frontières\". Un texte de soutien a par ailleurs rassemblé 300 signatures",
+        "img": "http://www.amnesty.fr/sites/default/files/imagecache/vignette_campagne_actu/petition-refugie_0.jpg",
+    },
+    {
+        "titre": "Des migrants manifestent à Idomeni pour réclamer l’ouverture de la frontière",
+        "contenu": "JEAN-CLAUDE BOULARD REÇU PAR LAURENT FABIUS AU SUJET DES RÉFUGIÉS… Le maire du Mans Jean-Claude Boulard a été reçu hier par le ministre des affaires étrangères Laurent Fabius au sujet des réfugiés. Cela fait un an que la mairie travaille sur l'accueil de 35 syriens, menacés dans leur pays. Et parmi eux, la famille d'un cardiologue syrien basé au Mans, le docteur Aleid. Selon la ville,  le ministre a publiquement confirmé sa volonté d'accélérer les dossiers en travaillant avec le ministre de l'intérieur Bernard Cazeneuve. 500 PERSONNES RASSEMBLÉES PLACE DE LA RÉPUBLIQUE EN SOUTIEN AUX RÉFUGIÉS… Au Mans, 500 personnes étaient rassemblées place de la République en fin d'après-midi hier, pour apporter leur soutien aux réfugiés. Un logement, des cours de français ou divers dons… Le mot d'ordre était \"solidarité\" avec un slogan \"Nous sommes tous migrants\". Un rassemblement à l'initiative de \"la ligue des droits de l'homme\" et de \"réseau d'éducation sans frontières\". Un texte de soutien a par ailleurs rassemblé 300 signatures",
+        "img": "http://s2.lemde.fr/image/2016/03/12/534x0/4881816_6_8702_environ-200-refugies-ont-proteste-dans-les_e053962af66ac77adc3e39cd02934049.jpg",
+    },
 ];
 
 	$scope.new = $scope.news[$stateParams.id];

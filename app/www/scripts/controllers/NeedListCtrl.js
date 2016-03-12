@@ -14,6 +14,8 @@ app.controller('NeedListCtrl', function($scope, $stateParams, $ionicModal) {
 		$scope.modal.hide();
 	};
 
+	$scope.typeList = 'need';
+
 	$scope.$on('$destroy', function() {
 		$scope.modal.remove();
 	})

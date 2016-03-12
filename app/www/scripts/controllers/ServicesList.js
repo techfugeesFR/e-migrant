@@ -14,6 +14,8 @@ app.controller('ServicesListCtrl', function($scope, $stateParams, $ionicModal) {
 		$scope.modal.hide();
 	};
 
+	$scope.typeList = 'service';
+
 	$scope.$on('$destroy', function() {
 		$scope.modal.remove();
 	})
