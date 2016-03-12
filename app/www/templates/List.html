@@ -29,10 +29,10 @@
   </ion-content>
   <div class="bar bar-footer">
   <div class="tabs">
-  <a class="tab-item">
+  <a href="#/app/{{typeList}}/map" class="tab-item">
     Carte
   </a>
-  <a class="tab-item">
+  <a class="tab-item tabs-assertive active">
     Listes
   </a>
 </div>
@@ -44,18 +44,18 @@
       <h1 class="title">Filtres</h1>
     </ion-header-bar>
     <ion-content>
-      <ion-list>
-				<ion-checkbox ng-model="filter">Agriculture/Animaux</ion-checkbox>
-			  <ion-checkbox ng-model="filter">Arts/Culture/Musique</ion-checkbox>
-			  <ion-checkbox ng-model="filter">Bâtiment/Rénovation</ion-checkbox>
-			  <ion-checkbox ng-model="filter">Hotellerie/Tourisme</ion-checkbox>
-			  <ion-checkbox ng-model="filter">Mécanique/Transport</ion-checkbox>
-			  <ion-checkbox ng-model="filter">Services à la personne</ion-checkbox>
-			  <ion-checkbox ng-model="filter">Restauration/Traiteur</ion-checkbox>
-			  <ion-checkbox ng-model="filter">Santé</ion-checkbox>
-			  <ion-checkbox ng-model="filter">Education</ion-checkbox>
-			  <ion-checkbox ng-model="filter">Sports/Loisirs</ion-checkbox>
-			</ion-list>
+     <ion-list>
+	  <ion-checkbox>Agriculture/Animaux</ion-checkbox>
+	  <ion-checkbox>Arts/Culture/Musique</ion-checkbox>
+	  <ion-checkbox>Bâtiment/Rénovation</ion-checkbox>
+	  <ion-checkbox>Hotellerie/Tourisme</ion-checkbox>
+	  <ion-checkbox>Mécanique/Transport</ion-checkbox>
+	  <ion-checkbox>Services à la personne</ion-checkbox>
+	  <ion-checkbox>Restauration/Traiteur</ion-checkbox>
+	  <ion-checkbox>Santé</ion-checkbox>
+	  <ion-checkbox>Education</ion-checkbox>
+	  <ion-checkbox>Sports/Loisirs</ion-checkbox>
+	</ion-list>
 
       <button class="button button-full button-assertive" ng-click="closeModal()">Fermer</button>
     </ion-content>
