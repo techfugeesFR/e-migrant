@@ -1,4 +1,73 @@
-app.controller('ServiceMapCtrl', function($scope) {
+app.controller('ServiceMapCtrl', function($scope, $rootScope) {
+  var residents = [
+    {
+    	"firstname": "Donald",
+    	"img": "https://www.thewrap.com/wp-content/uploads/2015/11/Donald-Trump.jpg",
+    	"pos": {
+    		"lat": 48.8689,
+    		"lng": 2.379886
+    	},
+    	"description": "Bonjour je m'apelle Toto, je suis Plombier depuis 3 ans !",
+    	"offer": 0,
+      "demand": 1
+    },
+    {
+    	"firstname": "Barack",
+    	"img": "http://www.sdpk.eu/wp-content/uploads/2014/07/number-2-u-s-president-barack-obama-second-most-admired-person-planet.jpg",
+    	"pos": {
+    		"lat": 48.85,
+    		"lng": 2.34
+    	},
+    	"description": "Bonjour je m'apelle Sisi, si vous avez un probleme avec votre voiture appellez moi !",
+    	"offer": 3,
+      "demand": 1
+    },
+    {
+    	"firstname": "Joe",
+    	"img": "https://i.kinja-img.com/gawker-media/image/upload/s--7rFEsW95--/c_fill,fl_progressive,g_north,h_358,q_80,w_636/197gkt72jr0e1jpg.jpg",
+    	"pos": {
+    		"lat": 48.87,
+    		"lng": 2.3886
+    	},
+    	"description": "Bonjour je m'apelle Coco !",
+    	"offer": 2,
+      "demand": 1
+    }
+  ];
+
+  var migrants = [
+    {
+    	"firstname": "Toto",
+    	"img": "https://www.thewrap.com/wp-content/uploads/2015/11/Donald-Trump.jpg",
+    	"pos": {
+    		"lat": 48.8689,
+    		"lng": 2.379886
+    	},
+    	"description": "Bonjour je m'apelle Toto, je suis Plombier depuis 3 ans !",
+    	"job": "Plombier"
+    },
+    {
+    	"firstname": "Siti",
+    	"img": "http://www.sdpk.eu/wp-content/uploads/2014/07/number-2-u-s-president-barack-obama-second-most-admired-person-planet.jpg",
+    	"pos": {
+    		"lat": 48.85,
+    		"lng": 2.34
+    	},
+    	"description": "Bonjour je m'apelle Sisi, si vous avez un probleme avec votre voiture appellez moi !",
+    	"job": "Garagiste"
+    },
+    {
+    	"firstname": "Coco",
+    	"img": "https://i.kinja-img.com/gawker-media/image/upload/s--7rFEsW95--/c_fill,fl_progressive,g_north,h_358,q_80,w_636/197gkt72jr0e1jpg.jpg",
+    	"pos": {
+    		"lat": 48.87,
+    		"lng": 2.3886
+    	},
+    	"description": "Bonjour je m'apelle Coco !",
+    	"job": "Menuisier"
+    }
+  ];
+
   var map;
   var markers = new Array();
   var infoWindows = new Array();
@@ -63,6 +132,8 @@ app.controller('ServiceMapCtrl', function($scope) {
         infowindow.open(map,this);
       });
     });
+
+
   }
 
   function contentString(data){
