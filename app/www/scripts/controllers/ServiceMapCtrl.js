@@ -1,5 +1,15 @@
-app.controller('ServiceMapCtrl', function($scope, $rootScope) {
+app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
   $scope.typeList = 'service';
+
+  $scope.showFilterBar = function () {
+    var filterBarInstance = $ionicFilterBar.show({
+      cancelText: "<i class='ion-ios-close-outline'></i>",
+      items: $scope.places,
+      update: function (filteredItems, filterText) {
+        $scope.places = filteredItems;
+      }
+    });
+  };
 
   var users = [
     {
