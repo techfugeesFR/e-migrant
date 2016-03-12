@@ -9,6 +9,7 @@
 .active {
 	color: #ef473a;
 }
+<<<<<<< HEAD
 .bar-footer {
   overflow: visible !important;
 }
@@ -196,4 +197,8 @@ a.autolinker {
 
 .loader .ion-loading-c {
   font-size: 64px;
+=======
+.fa {
+  margin-right: 5px;
+>>>>>>> 3a4bdcf8ccd81307ea8638556203bd44488c14fb
 }

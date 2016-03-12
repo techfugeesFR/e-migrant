@@ -1,5 +1,3 @@
 app.controller('NeedMapCtrl', function($scope) {
-  return {
-    
-  }
+  $scope.typeList = 'need';
 });
