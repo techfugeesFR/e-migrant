@@ -190,7 +190,33 @@ app.config(function($stateProvider, $urlRouterProvider) {
       }
     }
   })  
-
+  .state('app.profile', {
+    url: '/profile',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/Profile.html',
+        controller: 'ProfileCtrl'
+      }
+    }
+  })  
+  .state('app.home', {
+    url: '/home',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/Home.html',
+        controller: 'HomeCtrl'
+      }
+    }
+  })  
+  .state('app.news', {
+    url: '/home/:id',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/News.html',
+        controller: 'NewsCtrl'
+      }
+    }
+  })  
   .state('app.chat', {
     url: '/chat/:id',
     views: {
@@ -202,5 +228,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/service/list');
+  $urlRouterProvider.otherwise('/app/home');
 });

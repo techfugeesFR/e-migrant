@@ -1,0 +1,25 @@
+<ion-view view-title="Accueil">
+  <ion-content scroll="false">
+      <div class="padding home-top">
+         <div style="text-align:center;">
+             <p class="catch">{{ establishment.baseline }}</p>
+         </div>
+      </div>
+      <div class="padding">
+        <button ng-show="establishment.params.flag_show_dailly" class="button button-block button-positive color-1-bg" ng-click="dailly();">
+           {{ establishment.params.dailly_title }}
+        </button>
+      </div>  
+      <ion-scroll direction="y" class="theroot home-bottom">
+           <h2 class="title_bot">ACTUALITÉES</h2>
+           <div class="list">
+               <a ng-repeat="new in news" class="item item-thumbnail-left" href="#" ng-click="goNews($index)">
+                 <img src="{{ new.img }}">
+                 <h2>{{ new.titre }}</h2>
+                 <p>{{ new.contenu }}</p>
+               </a>
+           </div>
+           <p class="space"></p>
+      </ion-scroll>
+  </ion-content>
+</ion-view>
