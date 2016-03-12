@@ -1,3 +1,3 @@
-angular.controller('LoginCtrl', function($scope, $stateParams) {
+angular.module('app.controllers', []).controller('LoginCtrl', function($scope, $stateParams) {
 
 });

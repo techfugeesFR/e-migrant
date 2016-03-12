@@ -1,3 +1,3 @@
-angular.controller('NeedMapCtrl', function($scope, $stateParams) {
+angular.module('app.controllers', []).controller('NeedMapCtrl', function($scope, $stateParams) {
 
 });

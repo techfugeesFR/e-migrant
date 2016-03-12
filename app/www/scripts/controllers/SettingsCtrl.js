@@ -1,3 +1,3 @@
-angular.controller('SignCtrl', function($scope, $stateParams) {
+angular.module('app.controllers', []).controller('SignCtrl', function($scope, $stateParams) {
 
 });

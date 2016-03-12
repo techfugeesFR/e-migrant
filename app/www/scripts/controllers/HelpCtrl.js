@@ -1,3 +1,3 @@
-angular.controller('HelpCtrl', function($scope, $stateParams) {
+angular.module('app.controllers', []).controller('HelpCtrl', function($scope, $stateParams) {
 
 });
