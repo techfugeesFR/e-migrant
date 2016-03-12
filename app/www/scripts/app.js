@@ -6,7 +6,11 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('app', ['ionic', 'app.controllers'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope) {
+
+  //EN ATTENDANT LA SELECTION DU MIGRANT/CIVIL
+  $rootScope.type = 1;
+
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -36,7 +40,18 @@ angular.module('app', ['ionic', 'app.controllers'])
       url: '/settings',
       views: {
         'menuContent': {
-          templateUrl: 'templates/Settings.html'
+          templateUrl: 'templates/Settings.html',
+          controller: 'SettingsCtrl'
+        }
+      }
+    })
+
+  .state('app.messages', {
+      url: '/messages',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/Messages.html',
+          controller: 'MessagesCtrl'
         }
       }
     })
@@ -45,7 +60,8 @@ angular.module('app', ['ionic', 'app.controllers'])
       url: '/login',
       views: {
         'menuContent': {
-          templateUrl: 'templates/Login.html'
+          templateUrl: 'templates/Login.html',
+          controller: 'LoginCtrl'
         }
       }
     })
@@ -55,6 +71,7 @@ angular.module('app', ['ionic', 'app.controllers'])
       views: {
         'menuContent': {
           templateUrl: 'templates/Sign.html'
+          controller: 'SignCtrl'
         }
       }
     })
@@ -64,7 +81,8 @@ angular.module('app', ['ionic', 'app.controllers'])
       url: '/choice',
       views: {
         'menuContent': {
-          templateUrl: 'templates/Choice.html'
+          templateUrl: 'templates/Choice.html',
+          controller: 'ChoiceCtrl'
         }
       }
     })
