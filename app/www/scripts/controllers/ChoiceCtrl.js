@@ -1,3 +1,3 @@
-angular.controller('ChoiceCtrl', function($scope, $stateParams) {
+angular.module('app.controllers', []).controller('ChoiceCtrl', function($scope, $stateParams) {
 
 });
