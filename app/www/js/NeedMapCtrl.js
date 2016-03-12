@@ -1,3 +1,3 @@
-angular.controller('MapCtrl', function($scope, $stateParams) {
+angular.controller('NeedMapCtrl', function($scope, $stateParams) {
 
 });
