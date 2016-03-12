@@ -136,7 +136,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       views: {
         'menuContent': {
           templateUrl: 'templates/List.html',
-          controller: 'ServiceListCtrl'
+          controller: 'NeedListCtrl'
         }
       }
     })
