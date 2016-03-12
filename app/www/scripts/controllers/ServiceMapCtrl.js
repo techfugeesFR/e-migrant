@@ -1,4 +1,6 @@
 app.controller('ServiceMapCtrl', function($scope, $rootScope) {
+  $scope.typeList = 'service';
+
   var residents = [
     {
     	"firstname": "Donald",
@@ -7,7 +9,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope) {
     		"lat": 48.8689,
     		"lng": 2.379886
     	},
-    	"description": "Bonjour je m'apelle Toto, je suis Plombier depuis 3 ans !",
+    	"description": "Bonjour je m'apelle Donald Trump, et je me suis remis en question !",
     	"offer": 0,
       "demand": 1
     },
@@ -40,8 +42,8 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope) {
     	"firstname": "Toto",
     	"img": "https://www.thewrap.com/wp-content/uploads/2015/11/Donald-Trump.jpg",
     	"pos": {
-    		"lat": 48.8689,
-    		"lng": 2.379886
+    		"lat": 48.862117,
+    		"lng": 2.378519
     	},
     	"description": "Bonjour je m'apelle Toto, je suis Plombier depuis 3 ans !",
     	"job": "Plombier"
@@ -50,8 +52,8 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope) {
     	"firstname": "Siti",
     	"img": "http://www.sdpk.eu/wp-content/uploads/2014/07/number-2-u-s-president-barack-obama-second-most-admired-person-planet.jpg",
     	"pos": {
-    		"lat": 48.85,
-    		"lng": 2.34
+    		"lat": 48.864517,
+    		"lng": 2.369335
     	},
     	"description": "Bonjour je m'apelle Sisi, si vous avez un probleme avec votre voiture appellez moi !",
     	"job": "Garagiste"
@@ -85,9 +87,9 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope) {
     // map.controls[google.maps.ControlPosition.TOP_LEFT].push(searchItem);
 
     // Bias the SearchBox results towards current map's viewport.
-    map.addListener('bounds_changed', function() {
-      searchBox.setBounds(map.getBounds());
-    });
+    // map.addListener('bounds_changed', function() {
+    //   searchBox.setBounds(map.getBounds());
+    // });
 
     markerInit();
   });
@@ -108,7 +110,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope) {
     migrants.forEach(function(element,index){
 
       var infowindow = new google.maps.InfoWindow({
-        content: contentString(element),
+        content: contentMigrantString(element),
         maxWidth: 200
       });
 
@@ -136,9 +138,20 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope) {
 
   }
 
-  function contentString(data){
+  function contentMigrantString(data){
     return "<div style='overflow:hidden'>"+
         "<b>"+data.firstname+" est un "+data.job+"</b>"+
+        "<hr>"+
+        "<p>"+data.description+"</p>"+
+        "<a class='button button-block button-positive'>"+
+          "Voir son profil"+
+        "</a>"+
+      "</div>";
+  }
+
+  function contentResidentString(data){
+    return "<div style='overflow:hidden'>"+
+        "<b>"+data.firstname+" offre "+data.offer+" services et demande "+data.demand+" services</b>"+
         "<hr>"+
         "<p>"+data.description+"</p>"+
         "<a class='button button-block button-positive'>"+
