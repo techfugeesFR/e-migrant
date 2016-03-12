@@ -35,30 +35,38 @@ app.directive('input', function($timeout) {
     }
   }
 });
-app.controller('ChatCtrl', function($scope, $stateParams)
+app.controller('ChatCtrl', function($scope, $stateParams, $ionicScrollDelegate)
 {
+
+  var socket = io.connect('http://localhost:8080');
 
   $scope.hideTime = true;
 
   var alternate,
     isIOS = ionic.Platform.isWebView() && ionic.Platform.isIOS();
 
-  $scope.sendMessage = function() {
-    alternate = !alternate;
 
+  $scope.sendMessage = function(data) {
     var d = new Date();
     d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
-
-    $scope.messages.push({
+    alternate = !alternate;
+    var object = {
       userId: alternate ? '12345' : '54321',
-      text: $scope.data.message,
+      text: $scope.input.message,
       time: d
-    });
+    };
+    $scope.messages.push(object);
 
+    socket.emit('message', {"userId": 1, "message": $scope.data.message, "time": d});
     delete $scope.data.message;
     $ionicScrollDelegate.scrollBottom(true);
 
   };
+
+  socket.on('server_message', function($data)
+  {
+
+  });
 
 
   $scope.inputUp = function() {
