@@ -18,17 +18,17 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close ng-click="login()">
-          Login
-        </ion-item>
-        <ion-item menu-close href="#/app/search">
-          Search
-        </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
-        </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
+        <ion-item menu-close href="#/service/list" ng-show="type == 1">
+          Aider un migrant
+        </ion-item>        
+        <ion-item menu-close href="#/need/list" ng-show="type == 1">
+          Engager un migrant
+        </ion-item>        
+        <ion-item menu-close href="#/messages">
+          Messages
+        </ion-item>        
+        <ion-item menu-close href="#/settings">
+          Parametres
         </ion-item>
       </ion-list>
     </ion-content>
