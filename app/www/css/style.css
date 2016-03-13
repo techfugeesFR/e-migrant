@@ -15,6 +15,10 @@
     text-transform: uppercase;
 }
 
+.radio-content {
+  text-align: left !important;
+}
+
 .sign a {
   color:white !important;
 }
