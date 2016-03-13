@@ -1,5 +1,5 @@
-app.controller('HomeCtrl', function($scope, $stateParams, $location) {
-    $scope.news = 
+app.controller('HomeCtrl', function($scope, $stateParams, $location,$ionicHistory ) {
+    $scope.news =
 [
     {
         "titre": "500 personnes en soutien aux réfugiés au Mans",
@@ -20,9 +20,12 @@ app.controller('HomeCtrl', function($scope, $stateParams, $location) {
         "titre": "Des migrants manifestent à Idomeni pour réclamer l’ouverture de la frontière",
         "contenu": "JEAN-CLAUDE BOULARD REÇU PAR LAURENT FABIUS AU SUJET DES RÉFUGIÉS… Le maire du Mans Jean-Claude Boulard a été reçu hier par le ministre des affaires étrangères Laurent Fabius au sujet des réfugiés. Cela fait un an que la mairie travaille sur l'accueil de 35 syriens, menacés dans leur pays. Et parmi eux, la famille d'un cardiologue syrien basé au Mans, le docteur Aleid. Selon la ville,  le ministre a publiquement confirmé sa volonté d'accélérer les dossiers en travaillant avec le ministre de l'intérieur Bernard Cazeneuve. 500 PERSONNES RASSEMBLÉES PLACE DE LA RÉPUBLIQUE EN SOUTIEN AUX RÉFUGIÉS… Au Mans, 500 personnes étaient rassemblées place de la République en fin d'après-midi hier, pour apporter leur soutien aux réfugiés. Un logement, des cours de français ou divers dons… Le mot d'ordre était \"solidarité\" avec un slogan \"Nous sommes tous migrants\". Un rassemblement à l'initiative de \"la ligue des droits de l'homme\" et de \"réseau d'éducation sans frontières\". Un texte de soutien a par ailleurs rassemblé 300 signatures",
         "img": "http://s2.lemde.fr/image/2016/03/12/534x0/4881816_6_8702_environ-200-refugies-ont-proteste-dans-les_e053962af66ac77adc3e39cd02934049.jpg",
-    },
+    }
 ];
     $scope.goNews = function(id) {
+      $ionicHistory.nextViewOptions({
+        disableBack: true
+      });
         $location.path('/app/home/'+id);
     }
 });
