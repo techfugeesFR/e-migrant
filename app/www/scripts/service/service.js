@@ -12,7 +12,7 @@ app.service('Translate', function() {
         "setting": "Paramétres",
         "changeLang" : "Langue",
         list: {  title: "Liste" , titlePage: "Employées", map: "Carte", link:  "Liste", filters : "Filtres par type de compétences", textFormInputSearch: "Rechercher" },
-        login: { username: "Nom d'utilisateur", password: "Mot de passe", logIn: "Se connecter" }
+        login: { username: "Nom d'utilisateur", password: "Mot de passe", connect: "Se connecter" }
       },
       "arabe": {
         "news": "أخبار",
