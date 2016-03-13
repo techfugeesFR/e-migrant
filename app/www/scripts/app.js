@@ -169,7 +169,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller: 'EngageFormCtrl'
       }
     }
-  })    
+  })
 
   .state('app.help', {
     url: '/help/:id',
@@ -189,7 +189,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller: 'HelpFormCtrl'
       }
     }
-  })  
+  })
   .state('app.profile', {
     url: '/profile',
     views: {
@@ -198,7 +198,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller: 'ProfileCtrl'
       }
     }
-  })  
+  })
   .state('app.home', {
     url: '/home',
     views: {
@@ -207,7 +207,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller: 'HomeCtrl'
       }
     }
-  })  
+  })
   .state('app.news', {
     url: '/home/:id',
     views: {
@@ -216,7 +216,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller: 'NewsCtrl'
       }
     }
-  })  
+  })
+  .state('app.chatList', {
+    url: '/chat/list',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ChatList.html',
+        controller: 'ChatListCtrl'
+      }
+    }
+  })
   .state('app.chat', {
     url: '/chat/:id',
     views: {
