@@ -16,7 +16,7 @@ app.run(function($ionicPlatform, $rootScope, $ionicModal) {
     });
 
   //EN ATTENDANT LA SELECTION DU MIGRANT/CIVIL
-  $rootScope.type = 1;
+  $rootScope.type = 0;
 
   $rootScope.lang = 'fr';
 

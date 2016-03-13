@@ -37,16 +37,16 @@ app.directive('input', function($timeout) {
 });
 app.controller('ChatCtrl', function($scope, $stateParams, $ionicScrollDelegate)
 {
-
+  var $_scope = $scope;
   $scope.messages = [
     {
       "userId": '12679',
       "text": "Je cherchais justement un plombier pour mon repère, quand seriez vous disponible ?",
-      "image": "https://i.kinja-img.com/gawker-media/image/upload/s--7rFEsW95--/c_fill,fl_progressive,g_north,h_358,q_80,w_636/197gkt72jr0e1jpg.jpg",
-    },
-  ]
+      "image": "https://i.kinja-img.com/gawker-media/image/upload/s--7rFEsW95--/c_fill,fl_progressive,g_north,h_358,q_80,w_636/197gkt72jr0e1jpg.jpg"
+    }
+  ];
 
-  var socket = io.connect('http://localhost:8080');
+  var socket = io.connect('http://3e069704.ngrok.io:8080');
 
   $scope.hideTime = true;
 
@@ -64,8 +64,7 @@ app.controller('ChatCtrl', function($scope, $stateParams, $ionicScrollDelegate)
       time: d
     };
     $scope.messages.push(object);
-
-    socket.emit('message', {"userId": 1, "message": $scope.data.message, "time": d});
+    socket.emit('message', object);
     delete $scope.data.message;
     $ionicScrollDelegate.scrollBottom(true);
 
@@ -73,7 +72,8 @@ app.controller('ChatCtrl', function($scope, $stateParams, $ionicScrollDelegate)
 
   socket.on('server_message', function($data)
   {
-
+    dataimages = "https://i.kinja-img.com/gawker-media/image/upload/s--7rFEsW95--/c_fill,fl_progressive,g_north,h_358,q_80,w_636/197gkt72jr0e1jpg.jpg";
+    $_scope.messages.push($data);
   });
 
 

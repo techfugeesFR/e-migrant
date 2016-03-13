@@ -73,6 +73,10 @@ io.use(sharedsession(session({
 io.sockets.on('connection', function (socket)
 {
     console.log("connected");
+    socket.on('message', function(data)
+    {
+        socket.broadcast.emit('server_message', data);
+    });
 
 });
 

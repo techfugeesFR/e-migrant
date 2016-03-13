@@ -92,9 +92,9 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
     {
       "type": 1,
     	"name": "Donald",
-    	"image": "https://www.thewrap.com/wp-content/uploads/2015/11/Donald-Trump.jpg",
+    	"image": "./img/don.png",
     	"pos": {
-    		"lat": 48.8689,
+    		"lat": 48.8660,
     		"lng": 2.379886
     	},
     	"description": "Bonjour je m'apelle Donald Trump, et je me suis remis en question !",
@@ -104,10 +104,10 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
     {
       "type": 1,
     	"name": "Barack",
-    	"image": "http://www.sdpk.eu/wp-content/uploads/2014/07/number-2-u-s-president-barack-obama-second-most-admired-person-planet.jpg",
+    	"image": "./img/oba.png",
     	"pos": {
-    		"lat": 48.85,
-    		"lng": 2.34
+    		"lat": 48.860508,
+    		"lng": 2.375793
     	},
     	"description": "Bonjour je m'apelle Sisi, si vous avez un probleme avec votre voiture appellez moi !",
     	"offer": 3,
@@ -116,7 +116,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
     {
       "type": 1,
     	"name": "Dr.Denfer",
-    	"image": "https://i.kinja-img.com/gawker-media/image/upload/s--7rFEsW95--/c_fill,fl_progressive,g_north,h_358,q_80,w_636/197gkt72jr0e1jpg.jpg",
+    	"image": "./img/doc.png",
     	"pos": {
     		"lat": 48.87,
     		"lng": 2.3886
