@@ -1,13 +1,13 @@
-<ion-view view-title="List">
+<ion-view view-title="{{ translate.list.title }}">
   <ion-content class="has-header has-footer">
     <ion-list>
       <div class="bar bar-header">
-  			<h1 class="title">Employés</h1>
+  			<h1 class="title"> {{ translate.list.titlePage }} </h1>
 			</div>
 			<div class="bar bar-subheader item-input-inset">
 			  <label class="item-input-wrapper">
     			<i class="icon ion-ios-search placeholder-icon"></i>
-    		<input type="search" placeholder="Search" ng-model="search.$">
+    		<input type="search" placeholder="{{ translate.list.textFormInputSearch }}" ng-model="search.$">
   			</label>
 				  <a class="button button-icon icon ion-plus padding" ng-click="openModal()" style="margin-bottom: 3px;"></a>
 			</div>
@@ -25,10 +25,10 @@
   <div class="bar bar-footer">
     <div class="tabs">
       <a href="#/app/{{typeList}}/map" class="tab-item">
-        Carte
+        {{ translate.list.map }}
       </a>
       <a class="tab-item tabs-assertive active">
-        Listes
+        {{ translate.list.link }}
       </a>
     </div>
   </div>
@@ -36,7 +36,7 @@
 <script id="contact-modal.html" type="text/ng-template">
   <div class="modal">
     <ion-header-bar>
-      <h1 class="title">Filtres</h1>
+      <h1 class="title">{{ translate.list.filters }}</h1>
     </ion-header-bar>
     <ion-content>
      <ion-list>
