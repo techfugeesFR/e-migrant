@@ -94,7 +94,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
     	"name": "Donald",
     	"image": "./img/don.png",
     	"pos": {
-    		"lat": 48.8689,
+    		"lat": 48.8660,
     		"lng": 2.379886
     	},
     	"description": "Bonjour je m'apelle Donald Trump, et je me suis remis en question !",
@@ -106,8 +106,8 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
     	"name": "Barack",
     	"image": "./img/oba.png",
     	"pos": {
-    		"lat": 48.85,
-    		"lng": 2.34
+    		"lat": 48.860508,
+    		"lng": 2.375793
     	},
     	"description": "Bonjour je m'apelle Sisi, si vous avez un probleme avec votre voiture appellez moi !",
     	"offer": 3,
