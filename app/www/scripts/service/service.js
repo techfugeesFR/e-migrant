@@ -11,7 +11,7 @@ app.service('Translate', function() {
         "message" : "Message",
         "setting": "Paramétres",
         "changeLang" : "Langue",
-        list: {  title: "Liste" , titlePage: "Employées", map: "Carte", link:  "Liste", filters : "Filtres par type de compétences", textFormInputSearch: "Rechercher" },
+        list: {  title: "Liste" , titlePage: "Employés", map: "Carte", link:  "Liste", filters : "Filtres par type de compétences", textFormInputSearch: "Rechercher" },
         login: { username: "Nom d'utilisateur", password: "Mot de passe", connect: "Se connecter", 'register': "S'inscrire" },
         newsT: {
           titre: "500 personnes en soutien aux réfugiés au Mans",

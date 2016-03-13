@@ -42,7 +42,7 @@ app.controller('ServicesListCtrl', function($scope, $stateParams, $ionicModal) {
       "image" : "./img/4.jpg"
     },
     {
-      "name" : "JacquieMichel",
+      "name" : "Jaquie M.",
       "description" : "Endurant et très actif.",
       "image" : "./img/5.jpg"
     },
