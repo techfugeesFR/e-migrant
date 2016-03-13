@@ -10,6 +10,7 @@ app.service('Translate', function() {
         "profil": "Profil",
         "message" : "Message",
         "setting": "Paramétres",
+        "changeLang" : "Changer de langue",
         list: {  title: "List" , titlePage: "Employée", map: "Carte", link:  "Listes", filters : "Filtres", textFormInputSearch: "Rechercher" }
 
       },
