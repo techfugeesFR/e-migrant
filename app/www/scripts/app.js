@@ -108,6 +108,45 @@ app.config(function($stateProvider, $urlRouterProvider) {
       }
     })
 
+  .state('app.sign1', {
+      url: '/sign/1',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/Sign1.html',
+          controller: 'Sign1Ctrl'
+        }
+      }
+    })
+
+    .state('app.sign2', {
+      url: '/sign/2',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/Sign2.html',
+          controller: 'Sign2Ctrl'
+        }
+      }
+    })
+
+  .state('app.sign3', {
+      url: '/sign/3',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/Sign3.html',
+          controller: 'Sign3Ctrl'
+        }
+      }
+    })
+
+    .state('app.sign4', {
+      url: '/sign/4',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/Sign4.html',
+          controller: 'Sign4Ctrl'
+        }
+      }
+    })
 
   .state('app.choice', {
       url: '/choice',
