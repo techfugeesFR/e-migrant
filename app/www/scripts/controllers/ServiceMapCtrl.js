@@ -36,6 +36,17 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
     },
     {
       "type": 0,
+      "name" : "Ali",
+      "description" : "J'ai 26 ans et je suis originaire de Syrie...",
+      "image" : "./img/ali.png",
+      "job": "Maçon",
+      "pos": {
+        "lat": 48.85712,
+        "lng": 2.378969
+      }
+    },
+    {
+      "type": 0,
       "name" : "Fred",
       "description" : "L'informatique c'est mon dada.",
       "image" : "./img/3.png",
