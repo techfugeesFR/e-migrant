@@ -1,11 +1,11 @@
-<ion-view view-title="{{ new.titre }}">
+<ion-view view-title="{{ translate.newsT.titre }}">
     <ion-content delegate-handle="example-scroller" elastic-header="example-elastic-header" overflow-scroll="false">
         <img class="full-image" src="{{ new.img }}">
 
         <div class="content-lo">
-            <h2 class="padding">{{ new.titre }}</h2>
+            <h2 class="padding">{{ translate.newsT.titre }}</h2>
             <p class="padding" style="padding-top:20px;">
-                {{ new.contenu }}
+                {{ translate.newsT.contenu }}
             </p>
             <p class="text-center"><em>Par {{ new.auteur }} le {{ new.date }}</em></p>
         </div>
