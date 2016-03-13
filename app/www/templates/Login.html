@@ -1,21 +1,15 @@
-<ion-view view-title="Login">
+<ion-view view-title="Login" style="background-color:#4C4C4C;">
   <ion-content>
     <div class="list">
       <div class="text-center" style="margin-top:35px">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Wikispecies-logo.svg" width="33%">
+        <img src="img/logo.png" style="width: 270px;">
       </div>
       <div class="row">
         <div class="col col-80 col-offset-10" style="margin-top:50px">
-          <label class="item item-input item-floating-label">
-            <span class="input-label">Login</span>
-            <input type="text" placeholder="Login">
-          </label>
-          <label class="item item-input item-floating-label">
-            <span class="input-label">Password</span>
-            <input type="text" placeholder="Password">
-          </label>
-          <button class="button button-block button-positive">
-            Sign in
+          <ion-md-input placeholder="{{ translate.login.username }}" highlight-color="energized" type="text"></ion-md-input>
+          <ion-md-input placeholder="{{ translate.login.password }}" highlight-color="energized" type="password"></ion-md-input>
+          <button ng-click="goHomePage()" style="position:relative;top:25px;" class="button button-block button-assertive">
+            {{ translate.login.connect }}
           </button>
         </div>
       </div>

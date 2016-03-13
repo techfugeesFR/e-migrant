@@ -4,9 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var app = angular.module('app', ['ionic', 'jett.ionic.filter.bar']);
+var app = angular.module('app', ['ionic', 'jett.ionic.filter.bar', 'ionMdInput']);
 
-app.run(function($ionicPlatform, $rootScope, $ionicModal) {
+app.run(function($ionicPlatform, $rootScope, $ionicModal, $location, $state, Translate) {
 
   $ionicModal.fromTemplateUrl('lang.html', {
       scope: $rootScope,
@@ -15,13 +15,20 @@ app.run(function($ionicPlatform, $rootScope, $ionicModal) {
       $rootScope.modal = modal;
     });
 
+    $rootScope.goHome = function() {
+        $state.go('app.home');
+    };
+
   //EN ATTENDANT LA SELECTION DU MIGRANT/CIVIL
   $rootScope.type = 0;
 
-  $rootScope.lang = 'fr';
+  $rootScope.translate = Translate.get()[$rootScope.lang];
+
+  $rootScope.lang = 'france';
 
   $rootScope.langChange = function(lang) {
     $rootScope.lang = lang;
+    $rootScope.translate = Translate.get()[$rootScope.lang];
     $rootScope.closeModal();
   };
 
@@ -237,5 +244,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/home');
+  $urlRouterProvider.otherwise('/app/login');
 });
