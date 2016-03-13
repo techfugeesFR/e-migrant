@@ -6,6 +6,80 @@
     left: 5px;
 }
 
+.about-bottom {
+    color:black;
+    height:45%;
+    background-color:white;
+}
+
+.carte {
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+
+.carte li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width:100%;
+    height:150px;
+    position:relative;
+    cursor:pointer;
+}
+
+.carte li .img {
+     background-repeat: no-repeat;
+     background-position: 50% 50%;
+     background-size: cover;
+    width:100%;
+    height: 100%;
+}
+
+.carte li .calk {
+    background-color:black;
+    opacity:0.5;
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+    transition: all linear 0.2s;
+}
+
+.carte li {
+    border-bottom:4px solid #DE2129;
+}
+
+.carte li:hover > .calk {
+    opacity: 0.8;
+}
+
+.carte li span {
+    color: white;
+    text-transform: uppercase;
+    font-size: 22px;
+    position: absolute;
+    bottom: 11px;
+    left: 10px;
+    font-weight: bold;
+}
+
+.allScroll {
+    height:100%;
+}
+
+.mod img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.plage .top {
+    height:20%;
+    line-height: 20%;
+    position:relative
+}
+
 .sign {
       position: relative;
     top: 35px;

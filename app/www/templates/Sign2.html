@@ -1,9 +1,9 @@
 <ion-view view-title="Art & Artisanat">
   <ion-content>
      <ion-list>
-	  <ion-checkbox ng-repeat="option in options">Agriculture/Animaux</ion-checkbox>
+	  <ion-checkbox ng-repeat="option in options">{{ option.titre }}</ion-checkbox>
 	</ion-list>
 
-      <button class="button button-full button-assertive" onclick="document.href">Suivant</button>
+      <button class="button button-full button-assertive" ng-click="goSign()">Suivant</button>
   </ion-content>
 </ion-view>
