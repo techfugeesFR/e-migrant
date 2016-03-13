@@ -19,26 +19,31 @@
     <ion-content>
       <ion-list>
         <ion-item menu-close href="#/app/home">
-         <i class="fa fa-home"></i> Actualitées
+         <i class="fa fa-home"></i> {{ translate.news }}
         </ion-item>
         <ion-item menu-close href="#/app/service/list">
-         <i class="fa fa-star"></i> Voir les services
+         <i class="fa fa-star"></i> {{ translate.viewService }}
         </ion-item>
         <ion-item menu-close href="#/app/need/list">
-         <i class="fa fa-life-ring"></i> Voir les demandes
+         <i class="fa fa-life-ring"></i> {{ translate.viewRequest }}
         </ion-item>
+<<<<<<< HEAD
+        <ion-item menu-close href="#/app/messages">
+         <i class="fa fa-bell"></i> {{ translate.notification }}
+=======
         <ion-item menu-close href="#/app/chat/list">
          <i class="fa fa-bell"></i> Notifications
+>>>>>>> 1ac6feb27e3d9bacefcdc23504b29b72a7972195
           <span class="badge badge-assertive">1</span>
         </ion-item>
         <ion-item menu-close href="#/app/profile">
-         <i class="fa fa-user"></i> Mon profil
+         <i class="fa fa-user"></i> {{ translate.profil }}
         </ion-item>
         <ion-item menu-close href="#/app/messages">
-         <i class="fa fa-envelope"></i> Messages
+         <i class="fa fa-envelope"></i> {{ translate.message }}
         </ion-item>
         <ion-item menu-close href="#/app/settings">
-          <i class="fa fa-cogs"></i> Parametres
+          <i class="fa fa-cogs"></i> {{ translate.setting }}
         </ion-item>
         <ion-item menu-close ng-click="openModal()">
           <i class="fa fa-language"></i>Changer de langue
