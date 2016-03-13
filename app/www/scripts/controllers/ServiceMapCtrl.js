@@ -16,7 +16,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
       "type": 0,
       "name" : "Jean",
       "description" : "J'aime coudre des jeans.",
-      "image" : "./img/1.jpg",
+      "image" : "./img/1.png",
       "job":"Couturier",
       "pos": {
     		"lat": 48.8689,
@@ -27,7 +27,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
       "type": 0,
       "name" : "Pierre",
       "description" : "Je taille la pierre comme personne.",
-      "image" : "./img/2.jpg",
+      "image" : "./img/2.png",
       "job":"Tailleur",
       "pos": {
     		"lat": 48.85,
@@ -38,7 +38,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
       "type": 0,
       "name" : "Fred",
       "description" : "L'informatique c'est mon dada.",
-      "image" : "./img/3.jpg",
+      "image" : "./img/3.png",
       "job": "Informaticien",
       "pos": {
     		"lat": 48.87,
@@ -49,7 +49,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
       "type": 0,
       "name" : "Luke",
       "description" : "J'ai la force de beaucoup travailler.",
-      "image" : "./img/4.jpg",
+      "image" : "./img/4.png",
       "job": "Maçon",
       "pos": {
         "lat": 48.864517,
@@ -60,7 +60,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
       "type": 0,
       "name" : "JacquieMichel",
       "description" : "Endurant et très actif.",
-      "image" : "./img/5.jpg",
+      "image" : "./img/5.png",
       "job": "Acteur de charme",
       "pos": {
         "lat": 48.859576,
@@ -71,7 +71,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
       "type": 0,
       "name" : "Sacha",
       "description" : "Sacha aux platines !",
-      "image" : "./img/6.jpg",
+      "image" : "./img/6.png",
       "job": "Djokey",
       "pos": {
         "lat": 48.867467,
@@ -82,7 +82,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
       "type": 0,
       "name" : "Tzïdia",
       "description" : "Je suis une chef reconnu dans mon pays !",
-      "image" : "./img/7.jpg",
+      "image" : "./img/7.png",
       "job": "Cuisinier",
       "pos": {
         "lat": 48.860903,
