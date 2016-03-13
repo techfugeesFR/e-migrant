@@ -15,7 +15,7 @@
       <div ng-if="user._id !== message.userId">
 
         <img ng-click="viewProfile(message)" class="profile-pic left"
-             ng-src="{{toUser.pic}}" onerror="onProfilePicError(this)" />
+             ng-src="{{message.image}}" onerror="onProfilePicError(this)" />
 
         <div class="chat-bubble left">
 
@@ -24,7 +24,7 @@
 
           <div class="message-detail">
                               <span ng-click="viewProfile(message)"
-                                    class="bold">{{toUser.username}}</span>,
+                                    class="bold">{{toUser.username}}</span>
             <span am-time-ago="message.time"></span>
           </div>
 

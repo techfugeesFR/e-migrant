@@ -136,7 +136,8 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
       zoom: 14,
       center: err ? {lat: 48.858565, lng: 2.347198} : coords,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      mapTypeControl: false
+      mapTypeControl: false,
+      zoomControl: false,
     });
 
     markerInit();

@@ -1,10 +1,12 @@
 app.controller('NewsCtrl', function($scope, $stateParams) {
-    $scope.news = 
+    $scope.news =
 [
     {
         "titre": "500 personnes en soutien aux réfugiés au Mans",
         "contenu": "JEAN-CLAUDE BOULARD REÇU PAR LAURENT FABIUS AU SUJET DES RÉFUGIÉS… Le maire du Mans Jean-Claude Boulard a été reçu hier par le ministre des affaires étrangères Laurent Fabius au sujet des réfugiés. Cela fait un an que la mairie travaille sur l'accueil de 35 syriens, menacés dans leur pays. Et parmi eux, la famille d'un cardiologue syrien basé au Mans, le docteur Aleid. Selon la ville,  le ministre a publiquement confirmé sa volonté d'accélérer les dossiers en travaillant avec le ministre de l'intérieur Bernard Cazeneuve. 500 PERSONNES RASSEMBLÉES PLACE DE LA RÉPUBLIQUE EN SOUTIEN AUX RÉFUGIÉS… Au Mans, 500 personnes étaient rassemblées place de la République en fin d'après-midi hier, pour apporter leur soutien aux réfugiés. Un logement, des cours de français ou divers dons… Le mot d'ordre était \"solidarité\" avec un slogan \"Nous sommes tous migrants\". Un rassemblement à l'initiative de \"la ligue des droits de l'homme\" et de \"réseau d'éducation sans frontières\". Un texte de soutien a par ailleurs rassemblé 300 signatures",
         "img": "http://media.rtl2.fr/cache/_3jIpjssgAT8dfJtSgKH9Q/795v530-0/online/image/2015/0910/7779667323_500-personnes-etaient-rassemblees-place-de-la-republique-au-mans-hier-en-soutien-aux-refugies.jpg",
+        "auteur": "Michael Coït",
+        "date": "13/03/2016"
     },
     {
         "titre": "Comment l'Union européenne tente de se débarrasser des réfugiés",
