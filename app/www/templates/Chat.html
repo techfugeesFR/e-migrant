@@ -12,7 +12,7 @@
     <div ng-repeat="message in messages" class="message-wrapper"
          on-hold="onMessageHold($event, $index, message)">
 
-      <div ng-if="user._id !== message.userId">
+      <div ng-if="$rootScope.id !== message.userId">
 
         <img ng-click="viewProfile(message)" class="profile-pic left"
              ng-src="{{message.image}}" onerror="onProfilePicError(this)" />
@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <div ng-if="user._id === message.userId">
+      <div ng-if="$rootScope.id === message.userId">
 
         <img ng-click="viewProfile(message)" class="profile-pic right"
              ng-src="{{user.pic}}" onerror="onProfilePicError(this)" />
@@ -56,10 +56,10 @@
     </div>
   </ion-content>
 
-  <form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
+  <form name="sendMessageForm" ng-submit="sendMessage()" novalidate>
     <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
       <label class="item-input-wrapper">
-        <textarea style="background-color:#eee" ng-model="input.message" value="" placeholder="Send {{toUser.username}} a message..." required minlength="1" maxlength="1500" msd-elastic></textarea>
+        <input style="background-color:#eee" ng-model="input.message" value="" placeholder="Send {{toUser.username}} a message..." required minlength="1" maxlength="1500" msd-elastic></textarea>
       </label>
       <div class="footer-btn-wrap">
         <button class="button button-icon icon ion-android-send footer-btn" type="submit"
