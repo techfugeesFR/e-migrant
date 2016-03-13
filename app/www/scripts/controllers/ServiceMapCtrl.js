@@ -138,7 +138,6 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       mapTypeControl: false,
       zoomControl: false,
-      // scaleControl: true
     });
 
     markerInit();
