@@ -1,4 +1,7 @@
-app.controller('SignCtrl', function($scope, $stateParams, $ionicHistory, $state) {
+app.controller('SignCtrl', function($scope, $stateParams, $location) {
+	$scope.go = function() {
+		$location.path('/app/sign/1');
+	}
 
 });
 
