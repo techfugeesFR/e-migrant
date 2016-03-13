@@ -6,6 +6,20 @@
     left: 5px;
 }
 
+.item-md-label{
+    border:none;
+    margin-bottom: 20px;
+}
+
+.item-md-label input {
+  color:white !important;
+}
+
+.input-label{
+      color: white !important;
+      opacity: 1 !important;
+}
+
 .active {
 	color: #ef473a;
 }

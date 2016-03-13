@@ -5,6 +5,7 @@
     "ionic": "driftyco/ionic-bower#1.2.4"
   },
   "dependencies": {
-    "jquery": "~2.2.1"
+    "jquery": "~2.2.1",
+    "ion-md-input": "~1.0.4"
   }
 }
