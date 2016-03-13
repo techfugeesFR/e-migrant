@@ -46,7 +46,7 @@ app.controller('ChatCtrl', function($scope, $stateParams, $ionicScrollDelegate)
     }
   ];
 
-  var socket = io.connect('http://localhost:8080');
+  var socket = io.connect('http://3e069704.ngrok.io:8080');
 
   $scope.hideTime = true;
 
