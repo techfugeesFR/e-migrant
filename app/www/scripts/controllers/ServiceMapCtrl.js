@@ -204,7 +204,7 @@ app.controller('ServiceMapCtrl', function($scope, $rootScope, $ionicFilterBar) {
         "<b>"+data.name+" est un "+data.job+"</b>"+
         "<hr>"+
         "<p>"+data.description+"</p>"+
-        "<a class='button button-block button-positive'>"+
+        "<a href='#/app/settings' class='button button-block button-positive'>"+
           "Voir son profil"+
         "</a>"+
       "</div>";
