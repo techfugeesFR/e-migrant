@@ -8,14 +8,16 @@ var app = angular.module('app', ['ionic', 'jett.ionic.filter.bar', 'ionMdInput']
 
 app.run(function($ionicPlatform, $rootScope, $ionicModal, $location, $state, Translate) {
 
+
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
   $ionicModal.fromTemplateUrl('lang.html', {
       scope: $rootScope,
       animation: 'slide-in-up'
     }).then(function(modal) {
       $rootScope.modal = modal;
-    });
-
-    $rootScope.goHome = function() {
+$rootScope.goHome = function() {
         $state.go('app.home');
     };
 
@@ -38,13 +40,9 @@ app.run(function($ionicPlatform, $rootScope, $ionicModal, $location, $state, Tra
     $rootScope.closeModal = function() {
       $rootScope.modal.hide();
     };
-
-
-  $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-
+    
     $rootScope.openModal();
+    });
 
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
