@@ -10,17 +10,20 @@ app.service('Translate', function() {
         "profil": "Profil",
         "message" : "Message",
         "setting": "Paramétres",
-        "changeLang" : "Changer de langue",
-        list: {  title: "List" , titlePage: "Employée", map: "Carte", link:  "Listes", filters : "Filtres", textFormInputSearch: "Rechercher" }
-
+        "changeLang" : "Langue",
+        list: {  title: "Liste" , titlePage: "Employées", map: "Carte", link:  "Liste", filters : "Filtres par type de compétences", textFormInputSearch: "Rechercher" }
       },
       "arabe": {
-        "news": "Blababla",
-        "home": "le titre de la page accueil",
-        "viewService" : "deuxieme lien dans le menu",
-        "viewRequest" : "troisieme lien dans le menu",
-        "notification": "notification"
-
+        "news": "أخبار",
+        "home": "ترحيب",
+        "viewService" : "رؤية الخدمات",
+        "viewRequest" : "عرض طلبات",
+        "notification" : "إعلام",
+        "profil": "ملف تعريف",
+        "message" : "رسالة",
+        "setting": "المعلمات",
+        "changeLang" : "لغة",
+        list: {  title: "قائمة" , titlePage: "العاملين", map: "خريطة", link:  "قائمة", filters : "تصفية حسب نوع الاختصاص", textFormInputSearch: "بحث" }
       }
     }
   }
